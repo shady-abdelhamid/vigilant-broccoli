@@ -26,6 +26,7 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
+              "src/api",
               {
                 "glob": "*.svg",
                 "input": "./node_modules/bootstrap-icons/icons/",
@@ -121,5 +122,8 @@
       }
     }
   },
-  "defaultProject": "vigilant-broccoli"
+  "defaultProject": "vigilant-broccoli",
+  "cli": {
+    "defaultCollection": "@datorama/akita"
+  }
 }
