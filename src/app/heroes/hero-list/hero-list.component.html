@@ -1,1 +1,53 @@
-<div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">test</div>
+<section class="hero-list">
+  <div class="card">
+    <div class="card-body">
+      <h4 class="card-title">{{ pageTitle }}</h4>
+      <div class="clearfix">
+        <div class="float-left">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </span>
+            </div>
+            <input
+              type="text"
+              class="form-control"
+              name="searchInput"
+              id="searchInput"
+              placeholder="Search"
+            />
+          </div>
+        </div>
+
+        <div class="float-right">
+          Sort By Power
+          <button
+            type="button"
+            class="btn btn-primary btn-sm"
+            (click)="toggleSort()"
+          >
+            toggle
+          </button>
+          Sort by Name
+        </div>
+      </div>
+    </div>
+    <table class="table">
+      <thead class="">
+        <tr>
+          <th>Hero Name</th>
+          <th>Powers</th>
+          <th>Rate</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let hero of heroes">
+          <td scope="row">{{ hero.name }}</td>
+          <td>{{ hero.powers }}</td>
+          <td>{{ hero.rate }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>

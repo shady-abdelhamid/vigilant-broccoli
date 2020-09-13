@@ -4,7 +4,7 @@ import { HeroListComponent } from './hero-list/hero-list.component';
 
 const routes: Routes = [
   {
-    path: '/',
+    path: '',
     component: HeroListComponent,
   },
 ];
