@@ -43,7 +43,11 @@
       </thead>
       <tbody>
         <tr *ngFor="let hero of heroes">
-          <td scope="row">{{ hero.name }}</td>
+          <td scope="row">
+            <span [routerLink]="['/heroes', hero.id]">
+              {{ hero.name }}
+            </span>
+          </td>
           <td>{{ hero.powers }}</td>
           <td>{{ hero.rate }}</td>
         </tr>

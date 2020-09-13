@@ -9,9 +9,15 @@ export class HeroListComponent implements OnInit {
   pageTitle = 'Heroes';
 
   heroes = [
-    { name: 'MR. ROBOT', powers: 'Coding with VIM, Know Angular', rate: 4 },
-    { name: 'Richard Stallman', powers: 'Freedom Protector', rate: 4 },
     {
+      id: 1,
+      name: 'MR. ROBOT',
+      powers: 'Coding with VIM, Know Angular',
+      rate: 4,
+    },
+    { id: 2, name: 'Richard Stallman', powers: 'Freedom Protector', rate: 4 },
+    {
+      id: 3,
       name: 'Tim Berners-Lee',
       powers: 'Transport Objects through HTTP',
       rate: 4,
