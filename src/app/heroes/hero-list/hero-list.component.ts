@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Hero } from '../state/hero.model';
+import { HeroesService } from '../state/heroes.service';
 
 @Component({
   selector: 'vb-hero-list',
@@ -8,27 +11,15 @@ import { Component, OnInit } from '@angular/core';
 export class HeroListComponent implements OnInit {
   pageTitle = 'Heroes';
 
-  heroes = [
-    {
-      id: 1,
-      name: 'MR. ROBOT',
-      powers: 'Coding with VIM, Know Angular',
-      rate: 4,
-    },
-    { id: 2, name: 'Richard Stallman', powers: 'Freedom Protector', rate: 4 },
-    {
-      id: 3,
-      name: 'Tim Berners-Lee',
-      powers: 'Transport Objects through HTTP',
-      rate: 4,
-    },
-  ];
+  heroes$: Observable<Hero[]>;
 
   sortBy: string = 'name' || 'power';
 
-  constructor() {}
+  constructor(private heroesService: HeroesService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.heroes$ = this.heroesService.get();
+  }
 
   toggleSort(): void {
     console.log('TODO: toggle');
