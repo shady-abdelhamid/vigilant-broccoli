@@ -1,6 +1,7 @@
 export interface Hero {
   id: number | string;
   name: string;
+  description: string;
   powers: string;
   rate: number;
 }

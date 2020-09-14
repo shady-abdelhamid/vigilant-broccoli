@@ -1,1 +1,39 @@
-<p>hero-profile works!</p>
+<section class="hero-profile">
+  <div class="card">
+    <img class="card-img-top" src="holder.js/100x180/" alt="" />
+    <div class="card-body">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <img
+              src="/assets/img/profile-placeholder.jpg"
+              class="hero-profile__pic"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <p class="card-text">Hero Name:</p>
+          </div>
+          <div class="col-md-9">
+            {{ hero.name }}
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <p class="card-text">Description:</p>
+          </div>
+          <div class="col-md-9">
+            {{ hero.description }}
+          </div>
+        </div>
+        <div class="hero-profile__powers row mt-5">
+          <div class="col-md-12">
+            <h5>powers</h5>
+            <p class="card-text">{{ hero.powers }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
