@@ -21,7 +21,7 @@ export class HeroListComponent implements OnInit {
     this.heroes$ = this.heroesService.get();
   }
 
-  toggleSort(): void {
+  toggleSort(event): void {
     console.log('TODO: toggle');
   }
 }

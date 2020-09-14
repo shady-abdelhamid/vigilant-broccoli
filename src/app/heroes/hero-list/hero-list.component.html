@@ -22,13 +22,8 @@
 
         <div class="float-right">
           Sort By Power
-          <button
-            type="button"
-            class="btn btn-primary btn-sm"
-            (click)="toggleSort()"
-          >
-            toggle
-          </button>
+          <ngx-switch-input [value]="true" (valueChange)="toggleSort($event)">
+          </ngx-switch-input>
           Sort by Name
         </div>
       </div>
@@ -49,7 +44,18 @@
             </span>
           </td>
           <td>{{ hero.powers }}</td>
-          <td>{{ hero.rate }}</td>
+          <td>
+            <ngb-rating
+              [rate]="hero.rate"
+              max="5"
+              style="color: #6802c7"
+            ></ngb-rating>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
         </tr>
       </tbody>
     </table>
