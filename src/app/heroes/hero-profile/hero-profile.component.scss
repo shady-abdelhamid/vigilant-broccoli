@@ -1,0 +1,17 @@
+.hero-profile {
+  width: 70%;
+  margin: 0 auto;
+
+  &__pic {
+    display: block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 24px auto;
+    object-fit: cover;
+  }
+
+  // &__powers {
+  //   margin-top: 50px;
+  // }
+}

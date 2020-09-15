@@ -1,0 +1,71 @@
+<section class="hero-list">
+  <div class="card">
+    <div class="card-body">
+      <h4 class="card-title">{{ pageTitle }}</h4>
+      <div class="clearfix">
+        <div class="float-left">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </span>
+            </div>
+            <input
+              type="text"
+              class="form-control"
+              name="searchInput"
+              id="searchInput"
+              placeholder="Search"
+              [(ngModel)]="searchKeyword"
+            />
+          </div>
+        </div>
+
+        <div class="float-right">
+          Sort By Powers
+          <ngx-switch-input [value]="true" (valueChange)="toggleSort($event)">
+          </ngx-switch-input>
+          Sort by Name
+        </div>
+      </div>
+    </div>
+    <table class="table">
+      <thead class="">
+        <tr>
+          <th>Hero Name</th>
+          <th>Powers</th>
+          <th>Rate</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          *ngFor="
+            let hero of heroes$
+              | async
+              | heroSearch: searchKeyword
+              | heroOrder: orderBy
+          "
+        >
+          <td scope="row">
+            <a [routerLink]="['/heroes', hero.id]">
+              {{ hero.name }}
+            </a>
+          </td>
+          <td>{{ hero.powers }}</td>
+          <td>
+            <ngb-rating
+              [rate]="hero.rate"
+              max="5"
+              style="color: #6802c7"
+            ></ngb-rating>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
