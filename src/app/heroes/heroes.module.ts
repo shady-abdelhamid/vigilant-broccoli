@@ -10,9 +10,10 @@ import { HeroesService } from './state/heroes.service';
 import { NgxSwitchInputModule } from '@ngx-tiny/switch-input';
 import { FormsModule } from '@angular/forms';
 import { HeroSearchPipe } from './hero-search.pipe';
+import { HeroOrderPipe } from './hero-order.pipe';
 
 @NgModule({
-  declarations: [HeroListComponent, HeroProfileComponent, HeroSearchPipe],
+  declarations: [HeroListComponent, HeroProfileComponent, HeroSearchPipe, HeroOrderPipe],
   imports: [
     CommonModule,
     FormsModule,

@@ -38,11 +38,18 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let hero of heroes$ | async | heroSearch: searchKeyword">
+        <tr
+          *ngFor="
+            let hero of heroes$
+              | async
+              | heroSearch: searchKeyword
+              | heroOrder: orderBy
+          "
+        >
           <td scope="row">
-            <span [routerLink]="['/heroes', hero.id]">
+            <a [routerLink]="['/heroes', hero.id]">
               {{ hero.name }}
-            </span>
+            </a>
           </td>
           <td>{{ hero.powers }}</td>
           <td>

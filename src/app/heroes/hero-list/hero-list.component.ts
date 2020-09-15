@@ -13,7 +13,7 @@ export class HeroListComponent implements OnInit {
 
   heroes$: Observable<Hero[]>;
 
-  sortBy: string = 'name' || 'power';
+  orderBy: string = 'name';
 
   searchKeyword: string;
 
@@ -23,7 +23,7 @@ export class HeroListComponent implements OnInit {
     this.heroes$ = this.heroesService.get();
   }
 
-  toggleSort(event): void {
-    console.log('TODO: toggle');
+  toggleSort(isName): void {
+    this.orderBy = isName ? 'name' : 'powers';
   }
 }
