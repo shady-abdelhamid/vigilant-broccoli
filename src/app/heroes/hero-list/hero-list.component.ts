@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Hero } from '../state/hero.model';
 import { HeroesService } from '../state/heroes.service';
@@ -14,6 +14,8 @@ export class HeroListComponent implements OnInit {
   heroes$: Observable<Hero[]>;
 
   sortBy: string = 'name' || 'power';
+
+  searchKeyword: string;
 
   constructor(private heroesService: HeroesService) {}
 

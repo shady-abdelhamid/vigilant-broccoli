@@ -16,6 +16,7 @@
               name="searchInput"
               id="searchInput"
               placeholder="Search"
+              [(ngModel)]="searchKeyword"
             />
           </div>
         </div>
@@ -37,7 +38,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let hero of heroes$ | async">
+        <tr *ngFor="let hero of heroes$ | async | heroSearch: searchKeyword">
           <td scope="row">
             <span [routerLink]="['/heroes', hero.id]">
               {{ hero.name }}

@@ -8,11 +8,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeroesService } from './state/heroes.service';
 import { NgxSwitchInputModule } from '@ngx-tiny/switch-input';
+import { FormsModule } from '@angular/forms';
+import { HeroSearchPipe } from './hero-search.pipe';
 
 @NgModule({
-  declarations: [HeroListComponent, HeroProfileComponent],
+  declarations: [HeroListComponent, HeroProfileComponent, HeroSearchPipe],
   imports: [
     CommonModule,
+    FormsModule,
     HttpClientModule,
     NgbModule,
     NgxSwitchInputModule,
