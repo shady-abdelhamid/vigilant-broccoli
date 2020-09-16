@@ -2,7 +2,7 @@ name: build
 
 on:
   push:
-  # branches: [ master ]
+  branches: [master]
   pull_request:
     branches: [master]
 
@@ -22,7 +22,7 @@ jobs:
         run: npm run lint
       - name: Build
         run: npm run build -- --prod
-    # - name: Test
-    #   run: npm test -- --configuration=ci
+      - name: Test
+        run: npm test -- --configuration=ci
     # - name: E2E
     # run: npm run e2e -- --configuration=ci
