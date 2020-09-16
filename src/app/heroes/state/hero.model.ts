@@ -6,6 +6,6 @@ export interface Hero {
   rate: number;
 }
 
-export function createHero(params: Partial<Hero>) {
+export function createHero(params: Partial<Hero>): Hero {
   return {} as Hero;
 }
