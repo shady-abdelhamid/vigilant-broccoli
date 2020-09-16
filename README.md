@@ -1,4 +1,6 @@
-# VigilantBroccoli
+# U.N.I.S.H.F - HR portal
+
+[![build status](https://github.com/shady-abdelhamid/patna-product-mngmnt/workflows/build/badge.svg)](https://github.com/shady-abdelhamid/vigilant-broccoli/actions)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.6.
 

@@ -13,7 +13,7 @@ export class HeroListComponent implements OnInit {
 
   heroes$: Observable<Hero[]>;
 
-  orderBy: string = 'name';
+  orderBy = 'name';
 
   searchKeyword: string;
 
