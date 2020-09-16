@@ -1,4 +1,6 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { HeroesService } from '../state/heroes.service';
 
 import { HeroProfileComponent } from './hero-profile.component';
 
@@ -8,9 +10,10 @@ describe('HeroProfileComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HeroProfileComponent ]
-    })
-    .compileComponents();
+      imports: [HttpClientTestingModule],
+      declarations: [HeroProfileComponent],
+      providers: [HeroesService],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
