@@ -11,12 +11,19 @@ import { NgxSwitchInputModule } from '@ngx-tiny/switch-input';
 import { FormsModule } from '@angular/forms';
 import { HeroSearchPipe } from './hero-search.pipe';
 import { HeroOrderPipe } from './hero-order.pipe';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
-  declarations: [HeroListComponent, HeroProfileComponent, HeroSearchPipe, HeroOrderPipe],
+  declarations: [
+    HeroListComponent,
+    HeroProfileComponent,
+    HeroSearchPipe,
+    HeroOrderPipe,
+  ],
   imports: [
     CommonModule,
     FormsModule,
+    SharedModule,
     HttpClientModule,
     NgbModule,
     NgxSwitchInputModule,
