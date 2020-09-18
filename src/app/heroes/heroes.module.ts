@@ -8,8 +8,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeroesService } from './state/heroes.service';
 import { FormsModule } from '@angular/forms';
-import { HeroSearchPipe } from './hero-search.pipe';
-import { HeroOrderPipe } from './hero-order.pipe';
+import { HeroSearchPipe } from './pipes/hero-search.pipe';
+import { HeroOrderPipe } from './pipes/hero-order.pipe';
 import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
