@@ -23,8 +23,10 @@
 
         <div class="float-right">
           Sort By Powers
-          <ngx-switch-input [value]="true" (valueChange)="toggleSort($event)">
-          </ngx-switch-input>
+          <vb-switch
+            [value]="true"
+            (valueChange)="toggleSort($event)"
+          ></vb-switch>
           Sort by Name
         </div>
       </div>

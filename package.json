@@ -22,7 +22,6 @@
     "@angular/router": "~10.0.9",
     "@datorama/akita": "^4.0.0",
     "@ng-bootstrap/ng-bootstrap": "^7.0.0",
-    "@ngx-tiny/switch-input": "^10.0.0",
     "bootstrap": "^4.5.2",
     "bootstrap-icons": "^1.0.0",
     "font-awesome": "^4.7.0",
