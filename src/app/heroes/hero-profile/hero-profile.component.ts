@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Hero } from '../state/hero.model';
 import { HeroesService } from '../state/heroes.service';
 
@@ -10,10 +11,16 @@ import { HeroesService } from '../state/heroes.service';
 export class HeroProfileComponent implements OnInit {
   hero: Hero;
 
-  constructor(private heroesService: HeroesService) {}
+  constructor(
+    private route: ActivatedRoute,
+    private heroesService: HeroesService
+  ) {}
 
   ngOnInit(): void {
-    this.hero = this.heroesService.getHero(1);
-    //  .subscribe((hero) => (this.hero = hero));
+    const param = this.route.snapshot.paramMap.get('id');
+    if (param) {
+      const id = +param;
+      this.hero = this.heroesService.getHero(id);
+    }
   }
 }
