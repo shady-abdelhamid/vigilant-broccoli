@@ -2,6 +2,9 @@
 
 [![build status](https://github.com/shady-abdelhamid/vigilant-broccoli/workflows/build/badge.svg)](https://github.com/shady-abdelhamid/vigilant-broccoli/actions)
 
+---
+
+![image info](./src/assets/img/app.png)
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.6.
 
 ## Development server
